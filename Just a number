@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n, m;
+
+    while (scanf("%d %d", &n, &m) == 2) {
+        
+        long long dividend = 10;
+        int digit;
+
+        for (int i = 1; i <= m; i++) {
+            digit = dividend / n;
+            dividend %= n;
+            dividend *= 10;
+
+            if (i == m) {
+                printf("%d\n", digit);
+            }
+        }
+    }
+
+    return 0;
+}
